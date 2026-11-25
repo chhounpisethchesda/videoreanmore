@@ -38,7 +38,7 @@ export const VIDEOS: Record<VideoMode, VideoInfo> = {
     titleKhmer: 'ការរៀនតាមរយៈការជជែកជាមួយគ្រូ AI',
     descriptionEng: 'Step-by-step Socratic math tutoring with visual models and hints in chat.',
     descriptionKhmer: 'ការណែនាំសិស្សដោះស្រាយលំហាត់គណិតវិទ្យាតាមការជជែកជាជំហានៗ។',
-    videoSrc: '/demo_video.mp4',
+    videoSrc: '/chat_demo.mp4',
     poster: '/worksheet.png',
   },
   live: {
@@ -49,7 +49,7 @@ export const VIDEOS: Record<VideoMode, VideoInfo> = {
     titleKhmer: 'ការរៀនផ្ទាល់តាមកាមេរ៉ាជាមួយគ្រូ AI',
     descriptionEng: 'Real-time worksheet handwriting tracking, paper checking, and voice tutor.',
     descriptionKhmer: 'ការពិនិត្យមើលសន្លឹកកិច្ចការ និងការសរសេរដៃផ្ទាល់តាមកាមេរ៉ាជាមួយនឹងការឆ្លើយតបជាសំឡេង។',
-    videoSrc: '/demo_video.mp4',
+    videoSrc: '/live_demo.mp4',
     poster: '/worksheet.png',
   },
 };
@@ -57,7 +57,7 @@ export const VIDEOS: Record<VideoMode, VideoInfo> = {
 export default function App() {
   const [language, setLanguage] = useState<'en' | 'km'>('en');
   const isKhmer = language === 'km';
-  const [activeMode, setActiveMode] = useState<VideoMode>('live');
+  const [activeMode, setActiveMode] = useState<VideoMode>('chat');
   const activeVideo = VIDEOS[activeMode];
 
   const videoRef = useRef<HTMLVideoElement>(null);
